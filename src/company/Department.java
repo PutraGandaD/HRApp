@@ -10,7 +10,7 @@ package company;
  */
 public class Department {
     private String dep_name;
-    private Employee[] emp;
+    private Employee[] employee = new Employee[10];
 
     public Department(String dep_name) {
         this.dep_name = dep_name;
@@ -25,10 +25,25 @@ public class Department {
     }
     
     public void addEmployee(Employee[] new_emp) {
-        emp = new_emp;
+        employee = new_emp;
     }
     
     public Employee[] getEmployee() {
-        return emp;
+        return employee;
+    }
+    
+    public double totalSalary() {
+        double totalSalary = 0.0;
+        
+        for (Employee emp : employee) {
+            totalSalary += emp.getSalary();
+        }
+        return totalSalary;
+    }
+    
+    
+    @Override
+    public String toString() {
+        return "Department name = " + getDep_name();
     }
 }
