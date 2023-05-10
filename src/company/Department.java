@@ -44,16 +44,14 @@ public class Department {
         }
     }
     
-    public Employee[] getEmployees() { 
-        Employee[] empData = null;
-        
+    public Employee[] getEmployees() {        
         for(Employee emp : employee) {
-            if(emp != null) {
+            if(emp!=null) {
                 System.out.println(emp);
             }
         }
         
-        return empData;
+        return null;
     }
     
     public double totalSalary() {
