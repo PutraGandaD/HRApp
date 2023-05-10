@@ -48,7 +48,9 @@ public class Department {
         Employee[] empData = null;
         
         for(Employee emp : employee) {
-            System.out.println(emp);
+            if(emp != null) {
+                System.out.println(emp);
+            }
         }
         
         return empData;
@@ -58,7 +60,9 @@ public class Department {
         double totalSalary = 0.0;
         
         for (Employee emp : employee) {
-            totalSalary += emp.getSalary();
+            if(emp != null) {
+                totalSalary += emp.getSalary();
+            }           
         }
         return totalSalary;
     }    
@@ -78,6 +82,7 @@ public class Department {
         for (Employee emp : employee) {
             if (empId == emp.getID()) {
                 empData = emp;
+                break;
             }
         }
         

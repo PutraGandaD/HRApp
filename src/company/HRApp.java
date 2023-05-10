@@ -33,13 +33,13 @@ public class HRApp {
         Employee e11 = new Employee(133, "Alex", 14.0);
         Employee e12 = new Employee(134, "Alexa", 14.0);
         
-        Employee emp[] = {e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11};
+        Employee emp[] = {e1, e2, e3, e4, e5, e6, e7, e8, e9, e10};
         
         // 4. Create a few employees(above) and add that to Department
         dep1.addEmployees(emp);
         
         // 5. Locate an employee by their identification number
-//        System.out.println(dep1.getEmpbyID(123));
+        System.out.println(dep1.getEmpbyID(129));
         
         System.out.println("Total employee in this department = " + dep1.empCounter()); 
         System.out.println("Employee list = ");
@@ -49,13 +49,8 @@ public class HRApp {
         System.out.println("");
         
         // 7-8. Print total salary and Average Salary of that department
-        try {
-            System.out.println("Total Salary = " + dep1.totalSalary());
-            System.out.println("Average Salary = " + dep1.AverageSalary());
-//            System.out.println(dep1.getEmpbyID(123));
-        } catch (NullPointerException e) {
-            System.out.println("Array is null! Cannot get Total Salary and Average Salary.");
-        }
-       
+        System.out.println("Total Salary = " + dep1.totalSalary());
+        System.out.println("Average Salary = " + dep1.AverageSalary());
+        
     }
 }
