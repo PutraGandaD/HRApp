@@ -80,9 +80,11 @@ public class Department {
         Employee empData = null;
         
         for (Employee emp : employee) {
-            if (empId == emp.getID()) {
-                empData = emp;
-                break;
+            if (emp != null) {
+                if (empId == emp.getID()) {
+                    empData = emp;
+                    break;
+                }
             }
         }
         
