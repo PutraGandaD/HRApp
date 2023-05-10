@@ -10,7 +10,16 @@ package company;
  */
 public class HRApp {
     public static void main(String[] args) {
-        // Employee test
+        // 1. Create a print statement to say the app is starting
+        System.out.println("HRApp Starts");
+        
+        // 2. Create a New Department 
+        Department dep1 = new Department("IT Support Department");
+        
+        // 3. Call toString() method to print the Information about department
+        System.out.println(dep1);
+        
+        // List of Employee
         Employee e1 = new Employee(123, "Putra Ganda", 13.5);
         Employee e2 = new Employee(124, "Josh", 12.5);
         Employee e3 = new Employee(125, "Steve", 14.0);
@@ -24,26 +33,26 @@ public class HRApp {
         Employee e11 = new Employee(133, "Alex", 14.0);
         Employee e12 = new Employee(134, "Alexa", 14.0);
         
-        // Department test
-        Department dep1 = new Department("IT Support Department");
+        Employee emp[] = {e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11};
         
-        Employee emp[] = {e1, e2, e3, e4, e5, e6, e7, e8, e9, e10, e11, e12};
-        
+        // 4. Create a few employees(above) and add that to Department
         dep1.addEmployee(emp);
         
-//        for(Employee list : emp) {
-//            System.out.println(list);
-//        }
-
-        System.out.println(dep1);
+        // 5. Locate an employee by their identification number
+//        System.out.println(dep1.getEmpbyID(123));
         
-        System.out.println("Employees in " + dep1.getDep_name() + " =");
+        System.out.println("Total employee in this department = " + dep1.empCounter()); 
+        System.out.println("Employee list = ");
+        System.out.println("");
         
-        Employee[] dep1_emp = dep1.getEmployee();
-        for(Employee employee : dep1_emp) {
-            System.out.println(employee);
+        
+        try {
+            System.out.println("Total Salary = " + dep1.totalSalary());
+            System.out.println("Average Salary = " + dep1.AverageSalary());
+//            System.out.println(dep1.getEmpbyID(123));
+        } catch (NullPointerException e) {
+            System.out.println("Array is null! Cannot get Total Salary and Average Salary.");
         }
-        
-        System.out.println("Total Salary = " + dep1.totalSalary());
+       
     }
 }
