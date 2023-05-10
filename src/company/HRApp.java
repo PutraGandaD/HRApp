@@ -43,10 +43,12 @@ public class HRApp {
         
         System.out.println("Total employee in this department = " + dep1.empCounter()); 
         System.out.println("Employee list = ");
+        
+        // 6. Get every Employee in that department and print their information
         System.out.println(dep1.getEmployees());
         System.out.println("");
         
-        
+        // 7-8. Print total salary and Average Salary of that department
         try {
             System.out.println("Total Salary = " + dep1.totalSalary());
             System.out.println("Average Salary = " + dep1.AverageSalary());
