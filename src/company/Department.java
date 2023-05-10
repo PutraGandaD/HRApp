@@ -34,7 +34,7 @@ public class Department {
         this.dep_name = dep_name;
     }
     
-    public void addEmployee(Employee[] new_emp) {
+    public void addEmployees(Employee[] new_emp) {
         if(new_emp.length <= 10) {
             employee = new_emp;
         } else {
@@ -42,8 +42,14 @@ public class Department {
         }
     }
     
-    public Employee[] getEmployee() {
-        return employee;
+    public Employee[] getEmployees() { 
+        Employee[] empData = null;
+        
+        for(Employee emp : employee) {
+            System.out.println(emp);
+        }
+        
+        return empData;
     }
     
     public double totalSalary() {
