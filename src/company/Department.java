@@ -16,7 +16,9 @@ public class Department {
         int counter = 0;
         
         for (Employee emp : employee) {
-            counter++;
+            if(emp != null) {
+                counter++;
+            }
         }
         
         return counter;
