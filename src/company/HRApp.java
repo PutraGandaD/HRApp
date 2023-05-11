@@ -43,7 +43,7 @@ public class HRApp {
         Employee[] emps = dep1.getEmployees();
         
         // 5. Locate an employee by their identification number
-        System.out.println(dep1.getEmployeeByID(772));
+        System.out.println(dep1.getEmployeeByID(77442));
         
         System.out.println("Total employee in this department = " + dep1.getEmployeeCount()); 
         System.out.println("Employee list = ");

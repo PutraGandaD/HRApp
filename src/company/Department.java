@@ -88,8 +88,10 @@ public class Department {
         with a given id has been found.
         */
         for (Employee emp: employees) {
-            if(emp.getID() == (empId)) {
-                return emp;
+            if(emp != null) {
+                if(emp.getID() == (empId)) {
+                    return emp;
+                }
             }
         }
         return null;
